@@ -23,6 +23,8 @@ Installation and practice
 start the docker daemon
 
     sudo service docker start
+    sudo service apache start
+    sudo service apache status
 <br>
 For docker images
 
@@ -34,10 +36,13 @@ For docker Container details
     sudo docker ps -a
 <br>
 To stop or delete container
-
+    
+    sudo docker start container_id/container_name
     sudo docker stop container_id
     sudo docker rm container_id
     sudo docker rm -f container_id (forcefully removed the container)
+    sudo docker ps
+    
     
 <br>
 It will pull the hello-world image and if it is not there, then run the container.
@@ -47,6 +52,7 @@ It will pull the hello-world image and if it is not there, then run the containe
 It will pull the latest images of docker container and lunch the container. The if we do ls then we find out that we are inside the ununtu os running on a docker container.
 
     sudo docker run -it ubuntu
+    sudo docker run --dit --name=containername ubuntu (assign own name to container rather than default)
 <br>
 
     history
@@ -68,6 +74,31 @@ You need to have an image first in order to run this command. If you do not have
  The Container port 80 can be access on port 8001 on host machine.
   
     sudo docker run -i -d -t -p 8001:80 nginx
+    sudo docker run -itd nginx (without port mapping)
  <br>
+ 
+ We can also creates a image from a docker container ID using commit method,That new image will run on new Docker container.
+ <br>
+ 
+    sudo docker commit container_id imagename
+    sodo docker images
+    sudo docker run -dit --name=myimagename imagename
+    sudo docker ps
+ 
 ![docker](docker.png)
  
+In above image, the images are pulled the docker images from the docker hub onto the local machine. Then run those images using docker run command, which will lunch the container in the local machine.
+
+
+# Pull Database
+
+   - mongodb
+<br>
+    
+    sudo docker pull mongo:5.0.9
+    sudo docker run -dit -p 27017:27017 --name=test-mongo mongo
+    sudo docker run -dit -p 27017:27017 --name=test-mongo --env="MONGO_PASS=test123" --env="MONGO_USER=root" mongo
+    sudo docker exec -it name bash
+    mongo mongosh
+
+    
