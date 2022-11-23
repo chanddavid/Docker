@@ -69,5 +69,5 @@ You need to have an image first in order to run this command. If you do not have
   
     sudo docker run -i -d -t -p 8001:80 nginx
  <br>
-![conflit image](docker.jpg)
+![docker](docker.png)
  
