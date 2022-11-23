@@ -27,6 +27,7 @@ start the docker daemon
 For docker images
 
     sudo docker images
+    sudo docker rmi image_id (removes image only if its container is deleted)
 <br>
 For docker Container details
 
@@ -36,6 +37,7 @@ To stop or delete container
 
     sudo docker stop container_id
     sudo docker rm container_id
+    sudo docker rm -f container_id (forcefully removed the container)
     
 <br>
 It will pull the hello-world image and if it is not there, then run the container.
@@ -66,4 +68,6 @@ You need to have an image first in order to run this command. If you do not have
  The Container port 80 can be access on port 8001 on host machine.
   
     sudo docker run -i -d -t -p 8001:80 nginx
-   
+ <br>
+![conflit image](docker.jpg)
+ 
