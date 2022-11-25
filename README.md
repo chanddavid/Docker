@@ -23,8 +23,7 @@ Installation and practice
 start the docker daemon
 
     sudo service docker start
-    sudo service apache start
-    sudo service apache status
+
 <br>
 For docker images
 
@@ -98,9 +97,21 @@ In above image, the images are pulled the docker images from the docker hub onto
     sudo docker pull mongo:5.0.9
     sudo docker run -dit -p 27017:27017 --name=test-mongo mongo
     sudo docker run -dit -p 27017:27017 --name=test-mongo --env="MONGO_PASS=test123" --env="MONGO_USER=root" mongo
+    sudo docker run -dit -p 27017:27017 --name=test-mongo --env="MONGO_PASS=test123" --env="MONGO_USER=root" -v ~/folderonmachaine:/var/lib/mongodb/data mongo
     sudo docker exec -it name bash
     mongo mongosh
 
  # Bind Mount and Volume
  
  When we lunch a container, it store some data inside the container, our application needs these data. and if we stop the container we still have that data and if we delete container or relunch the another container from same image then the data will no longer available. That's why the concept of bind mount and volume came.This concepts helps to persist that data on host machine even after container is deleted. Bind mound will use any folder on host machine to store a data but Volume are created by docker command and inside folder /var/lib/docker/volumes docker maintain this by itself.
+ 
+ 
+ 
+# Run a django project on Docker Compose UP
+First we have a Dockerfile and docker-compose.yml file. after that ,
+<br>
+
+    dockor compose up
+    
+    
+    
