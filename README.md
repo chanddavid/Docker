@@ -98,7 +98,7 @@ In above image, the images are pulled the docker images from the docker hub onto
     sudo docker run -dit -p 27017:27017 --name=test-mongo mongo
     sudo docker run -dit -p 27017:27017 --name=test-mongo --env="MONGO_PASS=test123" --env="MONGO_USER=root" mongo
     sudo docker run -dit -p 27017:27017 --name=test-mongo --env="MONGO_PASS=test123" --env="MONGO_USER=root" -v ~/folderonmachaine:/var/lib/mongodb/data mongo
-    sudo docker exec -it name bash
+    sudo docker exec -it name bash or docker compose exec name sh
     mongo mongosh
 
  # Bind Mount and Volume
