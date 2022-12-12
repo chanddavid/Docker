@@ -91,7 +91,7 @@ In above image, the images are pulled the docker images from the docker hub onto
 
 # Pull Database
 <br>
-execute database
+Postgres db
     
     psql -U username -d databasename -W
 <br>
