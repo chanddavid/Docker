@@ -93,7 +93,7 @@ In above image, the images are pulled the docker images from the docker hub onto
 <br>
 execute database
     
-   - psql -U username -d databasename -W
+    psql -U username -d databasename -W
 <br>
 
    - mongodb
