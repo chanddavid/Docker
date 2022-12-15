@@ -26,7 +26,7 @@ start the docker daemon
 
 <br>
 For docker images
-
+    docker compose run imagename (images name as in dockor-compose.yml file)
     sudo docker images
     sudo docker rmi image_id (removes image only if its container is deleted)
 <br>
