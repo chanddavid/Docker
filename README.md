@@ -120,4 +120,8 @@ First we have a Dockerfile and docker-compose.yml file. after that ,
     dockor compose up
     
     
+# Port Allow
+
+    ufw allow <portnumber>
+    
     
